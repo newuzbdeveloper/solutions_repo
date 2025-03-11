@@ -65,7 +65,7 @@ Consider a projectile with an initial velocity of 20 m/s and an angle of 30°.
 
 1. **Time of flight**:  
    \[
-   T = \frac{2 \times 20 \times \sin(30^\circ)}{9.8} \approx 4.08 \text{ seconds}
+   T = \frac{2 v_0 \sin(\theta)}{g}
    \]
 
 2. **Maximum height**:

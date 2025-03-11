@@ -172,62 +172,94 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<p>Projectile Motion</p>
-<p>Projectile motion describes the motion of an object launched into the air, moving under the influence of gravity. It follows a curved path known as a parabola.</p>
-<p>Key Concepts</p>
+<h1 id="projectile-motion">Projectile Motion</h1>
+<p><strong>Projectile motion</strong> refers to the motion of an object that is thrown or projected into the air, influenced only by the force of gravity (and air resistance, which is typically neglected in basic calculations). The object follows a curved trajectory known as a <strong>parabola</strong>.</p>
+<h2 id="key-concepts">Key Concepts</h2>
 <ol>
-<li>Components of Motion</li>
+<li>
+<p><strong>Trajectory</strong>: The path followed by a projectile is called its trajectory. It is generally a curve, and its shape depends on the initial velocity, the angle of projection, and the acceleration due to gravity.</p>
+</li>
+<li>
+<p><strong>Components of Motion</strong>:</p>
+</li>
+<li><strong>Horizontal motion</strong>: In projectile motion, the horizontal velocity is constant (assuming no air resistance).</li>
+<li><strong>Vertical motion</strong>: The vertical velocity changes due to the acceleration caused by gravity.</li>
 </ol>
-<p>Projectile motion consists of two independent components:</p>
-<p>Horizontal Motion: The object moves at a constant velocity because there are no horizontal forces (neglecting air resistance).</p>
-<p>Vertical Motion: The object accelerates downward due to gravity (9.8 m/s² on Earth).</p>
-<p>Derivation of Governing Equations</p>
+<h3 id="equations-of-motion">Equations of Motion</h3>
+<p>For an object in projectile motion, we divide the motion into <strong>horizontal</strong> and <strong>vertical</strong> components:</p>
 <ol>
-<li>Fundamental Principles</li>
+<li>
+<p><strong>Horizontal Motion</strong>:
+   [
+   x(t) = v_0 \cdot \cos(\theta) \cdot t
+   ]
+   where:</p>
+</li>
+<li>
+<p><span class="arithmatex">\( x(t) \)</span> is the horizontal distance traveled at time <span class="arithmatex">\( t \)</span>,</p>
+</li>
+<li><span class="arithmatex">\( v_0 \)</span> is the initial velocity,</li>
+<li><span class="arithmatex">\( \theta \)</span> is the angle of projection,</li>
+<li>
+<p><span class="arithmatex">\( t \)</span> is the time elapsed.</p>
+</li>
+<li>
+<p><strong>Vertical Motion</strong>:
+   [
+   y(t) = v_0 \cdot \sin(\theta) \cdot t - \frac{1}{2} g t^2
+   ]
+   where:</p>
+</li>
+<li><span class="arithmatex">\( y(t) \)</span> is the vertical displacement at time <span class="arithmatex">\( t \)</span>,</li>
+<li><span class="arithmatex">\( g \)</span> is the acceleration due to gravity (approximately 9.8 m/s²).</li>
 </ol>
-<p>Newton's Second Law states:</p>
-<p>For projectile motion, the only force acting (neglecting air resistance) is gravity. We analyze motion in two perpendicular directions:</p>
-<p>Horizontal Motion: No acceleration (constant velocity).</p>
-<p>Vertical Motion: Acceleration due to gravity (acting downward).</p>
-<p>Decomposing the initial velocity into components:</p>
-<p>where is the launch angle.</p>
+<h3 id="time-of-flight">Time of Flight</h3>
+<p>The time the projectile remains in the air is determined by the vertical motion. The total time of flight is given by:</p>
+<div class="arithmatex">\[
+T = \frac{2 v_0 \sin(\theta)}{g}
+\]</div>
+<h3 id="maximum-height">Maximum Height</h3>
+<p>The maximum height <span class="arithmatex">\( H \)</span> reached by the projectile is given by:</p>
+<div class="arithmatex">\[
+H = \frac{(v_0 \sin(\theta))^2}{2g}
+\]</div>
+<h3 id="range">Range</h3>
+<p>The horizontal distance traveled by the projectile (or <strong>range</strong>) is:</p>
+<div class="arithmatex">\[
+R = \frac{v_0^2 \sin(2\theta)}{g}
+\]</div>
+<h2 id="example">Example</h2>
+<p>Consider a projectile with an initial velocity of 20 m/s and an angle of 30°.</p>
 <ol>
-<li>Differential Equations of Motion</li>
+<li>
+<p><strong>Time of flight</strong>:<br/>
+   [
+   T = \frac{2 \times 20 \times \sin(30^\circ)}{9.8} \approx 4.08 \text{ seconds}
+   ]</p>
+</li>
+<li>
+<p><strong>Maximum height</strong>:
+   [
+   H = \frac{(20 \times \sin(30^\circ))^2}{2 \times 9.8} \approx 5.1 \text{ meters}
+   ]</p>
+</li>
+<li>
+<p><strong>Range</strong>:
+   [
+   R = \frac{20^2 \times \sin(60^\circ)}{9.8} \approx 34.64 \text{ meters}
+   ]</p>
+</li>
 </ol>
-<p>Horizontal Motion</p>
-<p>Since no horizontal force acts on the projectile:</p>
-<p>Integrating once:</p>
-<p>Integrating again:</p>
-<p>This confirms that horizontal motion is uniform (constant velocity).</p>
-<p>Vertical Motion</p>
-<p>Since the only force is gravity , we write:</p>
-<p>Integrating once:</p>
-<p>Integrating again:</p>
-<p>This describes vertical displacement as a function of time.</p>
+<h2 id="factors-affecting-projectile-motion">Factors Affecting Projectile Motion</h2>
 <ol>
-<li>Time of Flight</li>
+<li><strong>Initial Velocity</strong>: The higher the initial velocity, the farther the projectile will travel.</li>
+<li><strong>Angle of Projection</strong>: The angle at which the object is projected affects the range and height.</li>
+<li>A launch angle of 45° gives the maximum range.</li>
+<li><strong>Gravity</strong>: The stronger the gravitational pull, the shorter the range and height.</li>
+<li><strong>Air Resistance</strong>: In the real world, air resistance will slow down the projectile and decrease its range and maximum height.</li>
 </ol>
-<p>The projectile lands when . Setting the vertical equation to zero:</p>
-<p>Factoring :</p>
-<p>Solving for :</p>
-<ol>
-<li>Range of the Projectile</li>
-</ol>
-<p>Using , we substitute :</p>
-<p>Using the identity :</p>
-<p>This equation shows that range depends on launch angle and initial speed .</p>
-<ol>
-<li>Family of Solutions</li>
-</ol>
-<p>By varying the initial conditions (, ), we get different trajectories:</p>
-<p>Increasing increases range and height.</p>
-<p>Adjusting changes trajectory shape.</p>
-<p>Different launch heights modify flight time.</p>
-<p>Applications</p>
-<p>Projectile motion applies to:</p>
-<p>Sports (football, basketball)</p>
-<p>Ballistics (bullets, rockets)</p>
-<p>Engineering (trajectory planning)</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Projectile motion is an essential concept in physics that describes the motion of objects under the influence of gravity. By understanding the basic equations and factors that affect projectile motion, we can predict and analyze the behavior of projectiles in various situations.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

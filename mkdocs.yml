@@ -1,6 +1,6 @@
 site_name: Physics and Mathematics
 theme:
-  name: mkdocs
+  name: readthedocs
   highlightjs: true
   hljs_languages:
     - yaml

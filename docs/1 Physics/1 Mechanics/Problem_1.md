@@ -1,11 +1,13 @@
 # Problem 1
 
-Understanding Projectile Motion
-When an object is launched into the air at an angle (without air resistance), it follows a parabolic path due to the influence of gravity.
+Projectile motion describes the motion of an object launched into the air, moving under the influence of gravity. It follows a curved path known as a parabola.
 
-We break this motion into two independent components:
+Key Concepts
 
-Horizontal motion → Moves at a constant velocity (no acceleration).
-Vertical motion → Affected by gravity (accelerates downward at 𝑔 = 9.8 /𝑠<sup>2</sup>).
+1. Components of Motion
 
-Each of these components follows different equations.
+Projectile motion consists of two independent components:
+
+1.1.Horizontal Motion: The object moves at a constant velocity because there are no horizontal forces (neglecting air resistance).
+
+1.2.Vertical Motion: The object accelerates downward due to gravity (9.8 m/s² on Earth).

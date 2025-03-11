@@ -4,10 +4,10 @@ Projectile motion describes the motion of an object launched into the air, movin
 
 Key Concepts
 
-1. Components of Motion
+- Components of Motion
 
 Projectile motion consists of two independent components:
 
-1.1.Horizontal Motion: The object moves at a constant velocity because there are no horizontal forces (neglecting air resistance).
+- Horizontal Motion: The object moves at a constant velocity because there are no horizontal forces (neglecting air resistance).
 
-1.2.Vertical Motion: The object accelerates downward due to gravity (9.8 m/s² on Earth).
+- Vertical Motion: The object accelerates downward due to gravity (9.8 m/s² on Earth).

@@ -1,5 +1,14 @@
 # Problem 2
 
+A **pendulum** is a weight suspended from a fixed point that swings back and forth under the influence of gravity. It is commonly used in clocks, physics experiments, and engineering applications.
+
+## Types of Pendulums
+
+1. **Simple Pendulum**: A mass (bob) attached to a string or rod with negligible mass.
+2. **Compound Pendulum**: A rigid body swinging about a fixed point.
+3. **Foucault Pendulum**: Demonstrates Earth's rotation.
+4. **Forced & Damped Pendulum**: Includes external forces and resistance.
+
 ### Forced Damped Pendulum: Small-Angle Approximation
 
 The **forced damped pendulum** is governed by the following second-order differential equation:
@@ -64,4 +73,4 @@ $$
 
 ## The transition between regular and chaotic motion and their physical interpretations.
 
-![Forced Damped Pendulum](./Pictures/image_chaos.png.png)
+![Forced Damped Pendulum](./Pictures/phase.png)

@@ -48,6 +48,28 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#projectile-motion">Projectile Motion</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#introduction">Introduction</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#key-components">Key Components</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#equations-of-motion">Equations of Motion</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#1-time-of-flight-t">1. Time of Flight (T)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#2-maximum-height-h">2. Maximum Height (H)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#3-range-r">3. Range (R)</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#4-equations-of-motion">4. Equations of Motion</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#trajectory-equation">Trajectory Equation</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#conclusion">Conclusion</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -129,94 +151,58 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
-<h1 id="projectile-motion">Projectile Motion</h1>
-<p><strong>Projectile motion</strong> refers to the motion of an object that is thrown or projected into the air, influenced only by the force of gravity (and air resistance, which is typically neglected in basic calculations). The object follows a curved trajectory known as a <strong>parabola</strong>.</p>
-<h2 id="key-concepts">Key Concepts</h2>
+<h2 id="projectile-motion">Projectile Motion</h2>
+<h2 id="introduction">Introduction</h2>
+<p>Projectile motion refers to the motion of an object that is launched into the air and moves under the influence of gravity alone, assuming no air resistance. The motion follows a <strong>parabolic trajectory</strong> due to the constant acceleration caused by gravity.</p>
+<p><img alt="Projectile Motion" src="../Pictures/range_plot.png"/></p>
+<h2 id="key-components">Key Components</h2>
 <ol>
-<li>
-<p><strong>Trajectory</strong>: The path followed by a projectile is called its trajectory. It is generally a curve, and its shape depends on the initial velocity, the angle of projection, and the acceleration due to gravity.</p>
-</li>
-<li>
-<p><strong>Components of Motion</strong>:</p>
-</li>
-<li><strong>Horizontal motion</strong>: In projectile motion, the horizontal velocity is constant (assuming no air resistance).</li>
-<li><strong>Vertical motion</strong>: The vertical velocity changes due to the acceleration caused by gravity.</li>
+<li><strong>Initial Velocity (v₀)</strong>: The velocity with which the projectile is launched.</li>
+<li><strong>Angle of Projection (θ)</strong>: The angle at which the projectile is launched with respect to the horizontal.</li>
+<li><strong>Acceleration Due to Gravity (g)</strong>: The constant acceleration acting downward, typically <code>9.8 m/s²</code> on Earth.</li>
+<li><strong>Time of Flight (T)</strong>: The total time the projectile remains in the air.</li>
+<li><strong>Maximum Height (H)</strong>: The highest vertical position reached by the projectile.</li>
+<li><strong>Range (R)</strong>: The horizontal distance covered by the projectile.</li>
 </ol>
-<h3 id="equations-of-motion">Equations of Motion</h3>
-<p>For an object in projectile motion, we divide the motion into <strong>horizontal</strong> and <strong>vertical</strong> components:</p>
-<ol>
-<li>
-<p><strong>Horizontal Motion</strong>:
-   [
-   x(t) = v_0 \cdot \cos(\theta) \cdot t
-   ]
-   where:</p>
-</li>
-<li>
-<p><span class="arithmatex">\( x(t) \)</span> is the horizontal distance traveled at time <span class="arithmatex">\( t \)</span>,</p>
-</li>
-<li><span class="arithmatex">\( v_0 \)</span> is the initial velocity,</li>
-<li><span class="arithmatex">\( \theta \)</span> is the angle of projection,</li>
-<li>
-<p><span class="arithmatex">\( t \)</span> is the time elapsed.</p>
-</li>
-<li>
-<p><strong>Vertical Motion</strong>:
-   [
-   y(t) = v_0 \cdot \sin(\theta) \cdot t - \frac{1}{2} g t^2
-   ]
-   where:</p>
-</li>
-<li><span class="arithmatex">\( y(t) \)</span> is the vertical displacement at time <span class="arithmatex">\( t \)</span>,</li>
-<li><span class="arithmatex">\( g \)</span> is the acceleration due to gravity (approximately 9.8 m/s²).</li>
-</ol>
-<h3 id="time-of-flight">Time of Flight</h3>
-<p>The time the projectile remains in the air is determined by the vertical motion. The total time of flight is given by:</p>
+<h2 id="equations-of-motion">Equations of Motion</h2>
+<p>Using kinematic equations, we can derive the following formulas for projectile motion:</p>
+<h3 id="1-time-of-flight-t">1. Time of Flight (T)</h3>
 <div class="arithmatex">\[
-T = \frac{2 v_0 \sin(\theta)}{g}
+T = \frac{2v_0 \sin \theta}{g}
 \]</div>
-<h3 id="maximum-height">Maximum Height</h3>
-<p>The maximum height <span class="arithmatex">\( H \)</span> reached by the projectile is given by:</p>
+<h3 id="2-maximum-height-h">2. Maximum Height (H)</h3>
 <div class="arithmatex">\[
 H = \frac{(v_0 \sin(\theta))^2}{2g}
 \]</div>
-<h3 id="range">Range</h3>
-<p>The horizontal distance traveled by the projectile (or <strong>range</strong>) is:</p>
+<h3 id="3-range-r">3. Range (R)</h3>
 <div class="arithmatex">\[
 R = \frac{v_0^2 \sin(2\theta)}{g}
 \]</div>
-<h2 id="example">Example</h2>
-<p>Consider a projectile with an initial velocity of 20 m/s and an angle of 30°.</p>
-<ol>
+<h3 id="4-equations-of-motion">4. Equations of Motion</h3>
+<ul>
 <li>
-<p><strong>Time of flight</strong>:<br/>
-   [
-   T = \frac{2 v_0 \sin(\theta)}{g}
-   ]</p>
+<h4 id="horizontal-motion">Horizontal Motion:</h4>
 </li>
+</ul>
+<div class="arithmatex">\[
+x = v_0 \cos(\theta) \cdot t
+\]</div>
+<ul>
 <li>
-<p><strong>Maximum height</strong>:
-   [
-   H = \frac{(20 \times \sin(30^\circ))^2}{2 \times 9.8} \approx 5.1 \text{ meters}
-   ]</p>
+<h4 id="vertical-motion">Vertical Motion:</h4>
 </li>
-<li>
-<p><strong>Range</strong>:
-   [
-   R = \frac{20^2 \times \sin(60^\circ)}{9.8} \approx 34.64 \text{ meters}
-   ]</p>
-</li>
-</ol>
-<h2 id="factors-affecting-projectile-motion">Factors Affecting Projectile Motion</h2>
-<ol>
-<li><strong>Initial Velocity</strong>: The higher the initial velocity, the farther the projectile will travel.</li>
-<li><strong>Angle of Projection</strong>: The angle at which the object is projected affects the range and height.</li>
-<li>A launch angle of 45° gives the maximum range.</li>
-<li><strong>Gravity</strong>: The stronger the gravitational pull, the shorter the range and height.</li>
-<li><strong>Air Resistance</strong>: In the real world, air resistance will slow down the projectile and decrease its range and maximum height.</li>
-</ol>
+</ul>
+<div class="arithmatex">\[
+y = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+\]</div>
+<h2 id="trajectory-equation">Trajectory Equation</h2>
+<p>The equation representing the parabolic path of the projectile is:</p>
+<div class="arithmatex">\[
+y = x \tan(\theta) - \frac{g x^2}{2 v_0^2 \cos^2(\theta)}
+\]</div>
+<p><img alt="Projectile Motion" src="../Pictures/range_plot2.png"/></p>
 <h2 id="conclusion">Conclusion</h2>
-<p>Projectile motion is an essential concept in physics that describes the motion of objects under the influence of gravity. By understanding the basic equations and factors that affect projectile motion, we can predict and analyze the behavior of projectiles in various situations.</p>
+<p>Projectile motion is an essential concept in physics, applicable in various real-world scenarios like sports, ballistics, and space exploration. Understanding the mathematical principles helps in predicting the motion of objects under gravity.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

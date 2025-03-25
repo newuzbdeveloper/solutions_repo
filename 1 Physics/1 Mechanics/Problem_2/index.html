@@ -50,6 +50,22 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#types-of-pendulums">Types of Pendulums</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#forced-damped-pendulum-small-angle-approximation">Forced Damped Pendulum: Small-Angle Approximation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#small-angle-approximation">Small-Angle Approximation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#solution-to-the-differential-equation">Solution to the Differential Equation</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#resonance-conditions">Resonance Conditions</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#energy-implications">Energy Implications</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-transition-between-regular-and-chaotic-motion-and-their-physical-interpretations">The transition between regular and chaotic motion and their physical interpretations.</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -129,6 +145,63 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-2">Problem 2</h1>
+<p>A <strong>pendulum</strong> is a weight suspended from a fixed point that swings back and forth under the influence of gravity. It is commonly used in clocks, physics experiments, and engineering applications.</p>
+<h2 id="types-of-pendulums">Types of Pendulums</h2>
+<ol>
+<li><strong>Simple Pendulum</strong>: A mass (bob) attached to a string or rod with negligible mass.</li>
+<li><strong>Compound Pendulum</strong>: A rigid body swinging about a fixed point.</li>
+<li><strong>Foucault Pendulum</strong>: Demonstrates Earth's rotation.</li>
+<li><strong>Forced &amp; Damped Pendulum</strong>: Includes external forces and resistance.</li>
+</ol>
+<h3 id="forced-damped-pendulum-small-angle-approximation">Forced Damped Pendulum: Small-Angle Approximation</h3>
+<p>The <strong>forced damped pendulum</strong> is governed by the following second-order differential equation:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + 2\beta \frac{d\theta}{dt} + \omega_0^2 \sin(\theta) = F_0 \cos(\omega t)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( \theta(t) \)</span> is the angular displacement,</li>
+<li><span class="arithmatex">\( \beta \)</span> is the damping coefficient,</li>
+<li><span class="arithmatex">\( \omega_0 \)</span> is the natural frequency of the pendulum (for small angles),</li>
+<li><span class="arithmatex">\( F_0 \)</span> is the amplitude of the driving force,</li>
+<li><span class="arithmatex">\( \omega \)</span> is the driving frequency,</li>
+<li><span class="arithmatex">\( \sin(\theta) \approx \theta \)</span> for small angles.</li>
+</ul>
+<p><img alt="Forced Damped Pendulum" src="../Pictures/image_plot3.png"/></p>
+<h3 id="small-angle-approximation">Small-Angle Approximation</h3>
+<p>For small angles (<span class="arithmatex">\( \theta \approx 0 \)</span>), <span class="arithmatex">\( \sin(\theta) \approx \theta \)</span>, so the equation simplifies to:</p>
+<div class="arithmatex">\[
+\frac{d^2\theta}{dt^2} + 2\beta \frac{d\theta}{dt} + \omega_0^2 \theta = F_0 \cos(\omega t)
+\]</div>
+<p>This is a standard <strong>forced damped harmonic oscillator</strong> equation.</p>
+<h3 id="solution-to-the-differential-equation">Solution to the Differential Equation</h3>
+<p>The solution consists of two parts:</p>
+<ol>
+<li><strong>Homogeneous Solution (Undriven)</strong>: The general solution to the homogeneous equation <span class="arithmatex">\( \frac{d^2\theta}{dt^2} + 2\beta \frac{d\theta}{dt} + \omega_0^2 \theta = 0 \)</span> is:</li>
+</ol>
+<div class="arithmatex">\[
+\theta_h(t) = A e^{-\beta t} \cos(\omega_d t + \phi)
+\]</div>
+<p>Where <span class="arithmatex">\( \omega_d = \sqrt{\omega_0^2 - \beta^2} \)</span> is the damped frequency.</p>
+<ol>
+<li><strong>Particular Solution (Driven)</strong>: The particular solution to the non-homogeneous equation <span class="arithmatex">\( \frac{d^2\theta}{dt^2} + 2\beta \frac{d\theta}{dt} + \omega_0^2 \theta = F_0 \cos(\omega t) \)</span> is:</li>
+</ol>
+<div class="arithmatex">\[
+\theta_p(t) = \frac{F_0}{\omega_0^2 - \omega^2} \cos(\omega t)
+\]</div>
+<p>Thus, the total solution is the sum of both:</p>
+<div class="arithmatex">\[
+\theta(t) = \theta_h(t) + \theta_p(t)
+\]</div>
+<h3 id="resonance-conditions">Resonance Conditions</h3>
+<p><strong>Resonance</strong> occurs when the driving frequency <span class="arithmatex">\( \omega \)</span> matches the natural frequency <span class="arithmatex">\( \omega_0 \)</span> of the system, i.e., <span class="arithmatex">\( \omega = \omega_0 \)</span>. At resonance, the system experiences maximum amplitude oscillations, which can lead to large oscillations and potential system failure due to energy buildup.</p>
+<h3 id="energy-implications">Energy Implications</h3>
+<ul>
+<li><strong>Non-Resonant Case</strong>: When <span class="arithmatex">\( \omega \neq \omega_0 \)</span>, the system oscillates with an amplitude determined by the balance between the driving force and damping.</li>
+<li><strong>Resonance</strong>: At resonance, the energy transfer from the driving force to the pendulum is maximized, leading to a significant increase in amplitude. If damping is small, the system can oscillate with large amplitude for long durations, which can result in high energy accumulation.</li>
+</ul>
+<h2 id="the-transition-between-regular-and-chaotic-motion-and-their-physical-interpretations">The transition between regular and chaotic motion and their physical interpretations.</h2>
+<p><img alt="Forced Damped Pendulum" src="../Pictures/phase.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

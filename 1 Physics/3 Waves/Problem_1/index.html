@@ -6,13 +6,13 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>Problem 1 - Physics and Mathematics</title>
+<title>Interference Patterns on a Water Surface - Physics and Mathematics</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "Problem 1";
+        var mkdocs_page_name = "Interference Patterns on a Water Surface";
         var mkdocs_page_input_path = "1 Physics/3 Waves/Problem_1.md";
         var mkdocs_page_url = null;
       </script>
@@ -64,8 +64,16 @@
 </li>
 <li class="toctree-l1 current"><a class="reference internal current">3 Waves</a>
 <ul class="current">
-<li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
+<li class="toctree-l2 current"><a class="reference internal current" href="#">Interference Patterns on a Water Surface</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#types-of-interference">Types of Interference</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#observing-the-pattern">Observing the Pattern</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#characteristics">Characteristics</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#real-world-applications">Real-World Applications</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -120,7 +128,7 @@
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a></li>
 <li class="breadcrumb-item">1 Physics</li>
 <li class="breadcrumb-item">3 Waves</li>
-<li class="breadcrumb-item active">Problem 1</li>
+<li class="breadcrumb-item active">Interference Patterns on a Water Surface</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -128,7 +136,91 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h1 id="interference-patterns-on-a-water-surface">Interference Patterns on a Water Surface</h1>
+<p>Interference patterns on a water surface occur when two or more sets of waves interact with each other. These patterns are a direct result of the <strong>principle of superposition</strong>, which states that when two or more waves meet at a point, the resulting wave displacement is the sum of the individual displacements.</p>
+<p><img alt="Projectile Motion" src="../Pictures/interference_pattern1.png"/></p>
+<h2 id="types-of-interference">Types of Interference</h2>
+<ul>
+<li><strong>Constructive Interference</strong>: When the crests (or troughs) of two waves coincide, they reinforce each other, creating a wave of greater amplitude.</li>
+<li><strong>Destructive Interference</strong>: When the crest of one wave coincides with the trough of another, they cancel each other out, reducing the wave amplitude or eliminating it entirely.</li>
+</ul>
+<p><img alt="Projectile Motion" src="../Pictures/types_of_interference.png"/></p>
+<h2 id="observing-the-pattern">Observing the Pattern</h2>
+<p>Interference patterns are typically observed in a <strong>ripple tank</strong> or in natural settings where multiple wave sources are present, such as:</p>
+<ul>
+<li>Droplets falling into a calm water surface.</li>
+<li>Two pebbles dropped close together.</li>
+<li>Waves reflecting off obstacles.</li>
+</ul>
+<p>The resulting pattern consists of a series of alternating <strong>bright (high-amplitude)</strong> and <strong>dark (low-amplitude or calm)</strong> regions, forming a distinctive pattern of lines or curves.</p>
+<h2 id="characteristics">Characteristics</h2>
+<ul>
+<li><strong>Nodal Lines</strong>: Areas of destructive interference where little or no motion is visible.</li>
+<li><strong>Antinodal Lines</strong>: Areas of constructive interference where wave motion is most visible.</li>
+<li><strong>Symmetry</strong>: The pattern is often symmetric around the line joining the sources.</li>
+</ul>
+<p><img alt="Projectile Motion" src="../Pictures/interference_characteristics.png"/></p>
+<h2 id="real-world-applications">Real-World Applications</h2>
+<p>Understanding interference on water surfaces helps illustrate broader wave phenomena such as:</p>
+<ul>
+<li>Light and sound interference</li>
+<li>Seismic wave behavior</li>
+<li>Radio signal propagation</li>
+</ul>
+<p>Interference patterns offer a fascinating glimpse into the wave nature of energy and matter, reinforcing fundamental concepts of physics and wave mechanics.</p>
+<h1 id="wave-interference-from-a-regular-polygon-configuration">🌊 Wave Interference from a Regular Polygon Configuration</h1>
+<p>This simulation demonstrates the interference pattern created when <strong>point wave sources</strong> are placed at the <strong>vertices of a regular polygon</strong>. We'll use a <strong>regular pentagon</strong> for this example.</p>
+<hr/>
+<h2 id="1-select-a-regular-polygon">1. Select a Regular Polygon</h2>
+<p>We choose a <strong>regular pentagon</strong> with 5 vertices equally spaced around a circle. This polygon is centered at the origin (0, 0), and each vertex lies at a fixed distance (radius) from the center.</p>
+<hr/>
+<h2 id="2-position-the-sources">2. Position the Sources</h2>
+<p>We place point wave sources at the pentagon’s vertices. The positions <span class="arithmatex">\((x_i, y_i)\)</span> of the sources are calculated using polar coordinates:</p>
+<div class="arithmatex">\[
+x_i = r \cdot \cos\left(\frac{2\pi i}{n}\right), \quad y_i = r \cdot \sin\left(\frac{2\pi i}{n}\right)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( n = 5 \)</span> (number of vertices)</li>
+<li><span class="arithmatex">\( r = 5 \)</span> (radius from the center)</li>
+</ul>
+<hr/>
+<h2 id="3-define-the-wave-equations">3. Define the Wave Equations</h2>
+<p>Each source emits circular waves described by the equation:</p>
+<div class="arithmatex">\[
+\psi_i(x, y) = \sin(k \cdot r_i)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( \psi_i \)</span> is the wave from source <span class="arithmatex">\( i \)</span></li>
+<li><span class="arithmatex">\( r_i = \sqrt{(x - x_i)^2 + (y - y_i)^2} \)</span></li>
+<li><span class="arithmatex">\( k = \frac{2\pi}{\lambda} \)</span> is the wave number</li>
+<li><span class="arithmatex">\( \lambda \)</span> is the wavelength</li>
+</ul>
+<hr/>
+<h2 id="4-superposition-of-waves">4. Superposition of Waves</h2>
+<p>The total wave displacement at a point <span class="arithmatex">\((x, y)\)</span> on the surface is the <strong>sum of displacements</strong> from all the sources:</p>
+<div class="arithmatex">\[
+\Psi(x, y) = \sum\_{i=1}^{n} \psi_i(x, y)
+\]</div>
+<p>This represents the <strong>interference pattern</strong>, showing areas of <strong>constructive</strong> and <strong>destructive</strong> interference.</p>
+<hr/>
+<h2 id="result-visualization">🧠 Result &amp; Visualization</h2>
+<p>The resulting interference pattern exhibits:</p>
+<ul>
+<li><strong>Symmetry</strong> consistent with the polygon (pentagonal pattern)</li>
+<li><strong>Nodal lines</strong> where waves cancel (destructive interference)</li>
+<li><strong>Antinodal lines</strong> where waves amplify (constructive interference)</li>
+</ul>
+<p>The pattern is a beautiful demonstration of <strong>wave superposition</strong> in 2D space.</p>
+<h2 id="_1"><img alt="Projectile Motion" src="../Pictures/pentagon_interference.png"/></h2>
+<h2 id="applications">📌 Applications</h2>
+<ul>
+<li>Wave physics and optics</li>
+<li>Seismic wave modeling</li>
+<li>Acoustics and sound design</li>
+<li>Art and pattern generation</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

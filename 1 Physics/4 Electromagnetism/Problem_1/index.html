@@ -128,7 +128,108 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h2 id="simulating-the-effects-of-the-lorentz-force">Simulating the Effects of the Lorentz Force</h2>
+<p>The Lorentz Force describes the force experienced by a charged particle moving through electric and magnetic fields. Simulating this effect involves numerically solving the equations of motion derived from the Lorentz Force law:</p>
+<p><strong>F = q(E + v × B)</strong></p>
+<p>where:</p>
+<ul>
+<li><em>F</em> is the force on the particle,</li>
+<li><em>q</em> is the charge,</li>
+<li><em>E</em> is the electric field,</li>
+<li><em>v</em> is the velocity of the particle, and</li>
+<li><em>B</em> is the magnetic field.</li>
+</ul>
+<p>These simulations help visualize particle trajectories in fields, understand electromagnetic behavior, and model real-world systems like particle accelerators and plasma confinement devices.</p>
+<h2 id="_1"><img alt="Projectile Motion" src="../Pictures/lorentz_trajectory.png"/></h2>
+<h2 id="systems-where-the-lorentz-force-plays-a-key-role">Systems Where the Lorentz Force Plays a Key Role</h2>
+<p>The Lorentz force is fundamental in many physical systems and technologies that involve charged particle motion under electric and magnetic fields. Below are several key examples:</p>
+<h3 id="1-particle-accelerators">1. <strong>Particle Accelerators</strong></h3>
+<p>In devices like cyclotrons and synchrotrons, the Lorentz force guides and accelerates charged particles along circular or spiral paths. Magnetic fields bend the particles' trajectories, while electric fields are used to increase their speed.</p>
+<h3 id="2-mass-spectrometers">2. <strong>Mass Spectrometers</strong></h3>
+<p>These instruments use electric and magnetic fields to separate ions based on their mass-to-charge ratio. The Lorentz force causes ions to curve as they travel through the magnetic field, allowing for precise mass analysis.</p>
+<h3 id="3-plasma-confinement-in-fusion-reactors">3. <strong>Plasma Confinement in Fusion Reactors</strong></h3>
+<p>In magnetic confinement fusion devices (e.g., tokamaks), strong magnetic fields exert Lorentz forces that confine hot plasma, preventing it from touching reactor walls and enabling sustained fusion reactions.</p>
+<h3 id="4-cathode-ray-tubes-crts">4. <strong>Cathode Ray Tubes (CRTs)</strong></h3>
+<p>In older televisions and oscilloscopes, the Lorentz force deflects electron beams to create images on a fluorescent screen. Electric and magnetic fields steer the beam precisely.</p>
+<h3 id="5-auroras-and-earths-magnetosphere">5. <strong>Auroras and Earth's Magnetosphere</strong></h3>
+<p>Charged particles from the solar wind interact with Earth's magnetic field, and the Lorentz force directs them toward the poles. This interaction causes auroras and affects satellite and communication systems.</p>
+<p>These applications highlight how the Lorentz force underpins both advanced scientific instruments and natural phenomena.</p>
+<h2 id="role-of-electric-e-and-magnetic-b-fields-in-controlling-charged-particle-motion">Role of Electric (E) and Magnetic (B) Fields in Controlling Charged Particle Motion</h2>
+<p>Electric and magnetic fields are essential tools for manipulating the motion of charged particles, based on the Lorentz force law:</p>
+<p><strong>F = q(E + v × B)</strong></p>
+<p>where:</p>
+<ul>
+<li><em>F</em> is the force on the particle,</li>
+<li><em>q</em> is the charge,</li>
+<li><em>E</em> is the electric field,</li>
+<li><em>v</em> is the particle's velocity,</li>
+<li><em>B</em> is the magnetic field.</li>
+</ul>
+<h3 id="electric-fields-e">⚡ Electric Fields (E)</h3>
+<ul>
+<li>Electric fields exert a <strong>direct linear force</strong> on charged particles.</li>
+<li>The force direction is along the field for positive charges and opposite for negative charges.</li>
+<li>Electric fields are used to <strong>accelerate or decelerate</strong> particles.</li>
+<li>Common in devices like <strong>electron guns</strong>, <strong>capacitors</strong>, and <strong>linear accelerators</strong>.</li>
+</ul>
+<h3 id="magnetic-fields-b">🧲 Magnetic Fields (B)</h3>
+<ul>
+<li>Magnetic fields exert a force <strong>perpendicular to both the velocity and the field direction</strong>.</li>
+<li>This causes the particle to move in <strong>curved or helical paths</strong>.</li>
+<li>Magnetic fields are ideal for <strong>steering or confining</strong> particle motion without changing their speed.</li>
+<li>Found in <strong>cyclotrons</strong>, <strong>mass spectrometers</strong>, and <strong>magnetic confinement fusion</strong> systems.</li>
+</ul>
+<h3 id="combined-e-and-b-fields">🔁 Combined E and B Fields</h3>
+<ul>
+<li>When both fields are present, their combined influence can finely control particle trajectories.</li>
+<li>Example: In <strong>velocity selectors</strong>, only particles with a specific speed pass through undeflected, using orthogonal E and B fields.</li>
+</ul>
+<p>Understanding and harnessing the interaction between these fields and charged particles is foundational in fields ranging from electronics and medical imaging to astrophysics and nuclear fusion.</p>
+<h2 id="_2"><img alt="Projectile Motion" src="../Pictures/field_effects_diagram.png"/></h2>
+<h2 id="charged-particle-trajectory-simulation-under-electromagnetic-fields">Charged Particle Trajectory Simulation under Electromagnetic Fields</h2>
+<p>This simulation models and visualizes the motion of a charged particle under different configurations of electric (<strong>E</strong>) and magnetic (<strong>B</strong>) fields using the Lorentz force law:</p>
+<p><strong>F = q(E + v × B)</strong></p>
+<h3 id="simulated-configurations">Simulated Configurations:</h3>
+<ol>
+<li><strong>Magnetic Field Only</strong></li>
+<li>Particle moves in a <strong>circular</strong> or <strong>helical</strong> path due to the perpendicular magnetic force.</li>
+<li>
+<p><strong>Combined Electric and Magnetic Fields</strong></p>
+</li>
+<li>
+<p>Results in <strong>helical motion</strong> along the direction of the electric field, with a superimposed circular path due to the magnetic field.</p>
+</li>
+<li>
+<p><strong>Crossed Electric and Magnetic Fields</strong></p>
+</li>
+<li>The particle experiences a <strong>drift motion</strong>, moving perpendicular to both fields (E × B direction).</li>
+</ol>
+<h3 id="features">Features:</h3>
+<ul>
+<li>Numerical integration of motion using time-stepping.</li>
+<li>3D visualization of particle trajectories for each field setup.</li>
+<li>Automatically saves and downloads a diagram (<code>lorentz_trajectories.png</code>) of all three simulations.</li>
+</ul>
+<p>This tool is ideal for educational purposes and helps in understanding charged particle dynamics in electromagnetic fields.</p>
+<h2 id="_3"><img alt="Projectile Motion" src="../Pictures/lorentz_trajectories.png"/></h2>
+<h2 id="parameter-exploration">Parameter Exploration</h2>
+<p>This section allows users to explore how different physical parameters influence the motion of a charged particle under electromagnetic fields. By varying these inputs, one can observe significant changes in the particle's trajectory:</p>
+<h3 id="parameters-to-vary">Parameters to Vary:</h3>
+<ul>
+<li><strong>Electric Field Strength (E)</strong></li>
+<li><strong>Magnetic Field Strength (B)</strong></li>
+<li><strong>Initial Velocity (v)</strong></li>
+<li><strong>Charge (q)</strong> and <strong>Mass (m)</strong> of the Particle</li>
+</ul>
+<h3 id="observations">Observations:</h3>
+<ul>
+<li>Stronger <strong>magnetic fields</strong> lead to tighter circular orbits (smaller radius).</li>
+<li>Higher <strong>electric fields</strong> can increase acceleration and drift.</li>
+<li>Changing the <strong>initial velocity</strong> affects the shape and orientation of the trajectory (linear, circular, helical).</li>
+<li>Varying <strong>charge and mass</strong> alters the force magnitude and resulting motion pattern.</li>
+</ul>
+<p>This exploration demonstrates the dynamic nature of charged particle motion and highlights the sensitivity of trajectories to physical conditions.</p>
+<h2 id="_4"><img alt="Projectile Motion" src="../Pictures/trajectory_exploration.png"/></h2>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

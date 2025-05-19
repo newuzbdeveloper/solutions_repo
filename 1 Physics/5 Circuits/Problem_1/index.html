@@ -128,7 +128,100 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h2 id="what-is-an-electric-circuit">What is an Electric Circuit?</h2>
+<p>An <strong>electric circuit</strong> is a closed loop or pathway that allows <strong>electric current</strong> to flow. It typically includes:</p>
+<ul>
+<li>A <strong>power source</strong> (e.g., battery or generator)</li>
+<li><strong>Conductive wires</strong> to carry the current</li>
+<li>One or more <strong>electrical components</strong> (e.g., resistors, bulbs, switches)</li>
+</ul>
+<p>For a circuit to work, it must be <strong>complete and unbroken</strong> so that charges can move continuously. Circuits are fundamental in powering electrical devices and systems.</p>
+<h2 id="_1"><img alt="Projectile Motion" src="../Pictures/simple_circuit_diagram.png"/></h2>
+<h2 id="calculating-equivalent-resistance-using-graph-theory">Calculating Equivalent Resistance Using Graph Theory</h2>
+<p>In graph theory, an electric circuit can be represented as a graph where:</p>
+<ul>
+<li><strong>Nodes (vertices)</strong> represent circuit junctions.</li>
+<li><strong>Edges</strong> represent resistors, each with a weight equal to its resistance.</li>
+</ul>
+<p>To compute the <strong>equivalent resistance</strong> between two nodes, graph-based methods such as the following are used:</p>
+<h3 id="algorithm-steps">Algorithm Steps:</h3>
+<ol>
+<li><strong>Model the circuit</strong> as an undirected weighted graph (resistors are bidirectional).</li>
+<li><strong>Create the conductance matrix</strong> (inverse of resistance for each edge).</li>
+<li><strong>Build the Laplacian matrix (L)</strong> of the graph, where:</li>
+<li><code>L = D - A</code></li>
+<li><code>D</code>: Degree matrix (sum of conductances connected to each node)</li>
+<li><code>A</code>: Adjacency matrix of conductances</li>
+<li><strong>Use the Moore-Penrose pseudoinverse</strong> of the Laplacian (<code>L⁺</code>) to find the equivalent resistance:</li>
+<li><code>R_eq(a, b) = L⁺[a,a] + L⁺[b,b] - 2 * L⁺[a,b]</code></li>
+</ol>
+<p>This method is powerful for analyzing <strong>complex resistor networks</strong>, especially in software and computational circuits.</p>
+<h2 id="_2"><img alt="Projectile Motion" src="../Pictures/resistor_graph.png"/></h2>
+<p>Function CalculateEquivalentResistance(graph, node_start, node_end):
+While number of edges &gt; 1:
+For each node N in graph:</p>
+<pre><code>        # --- Series Reduction ---
+        If N has exactly two neighbors (A and B) and N is not start or end:
+            R1 = resistance between N and A
+            R2 = resistance between N and B
+            Replace edges (A-N) and (N-B) with a single edge (A-B) of resistance R1 + R2
+            Remove node N
+
+        # --- Parallel Reduction ---
+        For each pair of nodes (U, V) with multiple edges:
+            Combine all resistors R1, R2, ..., Rn between U and V
+            R_parallel = 1 / (1/R1 + 1/R2 + ... + 1/Rn)
+            Replace multiple edges with a single edge (U-V) of resistance R_parallel
+
+Return resistance between node_start and node_end
+
+## Pseudocode Explanation: Series and Parallel Resistor Reduction
+</code></pre>
+<p>This pseudocode outlines an algorithm to compute the <strong>equivalent resistance</strong> between two nodes in a resistor network by identifying and reducing <strong>series</strong> and <strong>parallel</strong> connections.</p>
+<h2 id="_3"><img alt="Projectile Motion" src="../Pictures/resistor_reduction_algorithm.png"/></h2>
+<h3 id="key-concepts">Key Concepts:</h3>
+<ul>
+<li>
+<p><strong>Graph Representation</strong>:<br/>
+  The resistor network is modeled as an <strong>undirected weighted graph</strong>, where:</p>
+</li>
+<li>
+<p><strong>Nodes</strong> represent circuit junctions.</p>
+</li>
+<li>
+<p><strong>Edges</strong> represent resistors, with weights equal to resistance values.</p>
+</li>
+<li>
+<p><strong>Series Reduction</strong>:<br/>
+  A node connected to <strong>exactly two other nodes</strong> (and not being a start or end terminal) is a <strong>series node</strong>.</p>
+</li>
+<li>
+<p>The resistors connected in series can be combined by summing their resistances:
+    $$
+     [
+     R_{\text{eq}} = R_1 + R_2
+     ]
+    $$</p>
+</li>
+<li>
+<p><strong>Parallel Reduction</strong>:<br/>
+  If <strong>multiple resistors exist between the same pair of nodes</strong>, they are in <strong>parallel</strong>.</p>
+</li>
+<li>These can be combined using the reciprocal rule:
+    $$
+      [
+      \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \dots + \frac{1}{R_n}
+      ]
+    $$</li>
+</ul>
+<h3 id="algorithm-steps_1">Algorithm Steps:</h3>
+<ol>
+<li><strong>Loop</strong> through the graph until only one edge remains between the source and target nodes.</li>
+<li>Identify <strong>series nodes</strong> and reduce them by combining connected resistors.</li>
+<li>Identify <strong>parallel edges</strong> between node pairs and replace them with a single equivalent resistor.</li>
+<li><strong>Repeat</strong> the reduction until a single equivalent resistance is found between the start and end nodes.</li>
+</ol>
+<p>This approach simplifies complex resistor networks and is especially useful in automated circuit analysis and educational simulations.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

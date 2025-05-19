@@ -84,6 +84,16 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 1</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#1-uniform-distribution">1. Uniform Distribution</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-random-distribution">2. Random Distribution</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#3-clumped-distribution">3. Clumped Distribution</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#4-gradient-or-zonal-distribution-ecological-context">4. Gradient or Zonal Distribution (Ecological Context)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#summary-table">Summary Table</a>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Problem_2/">Problem 2</a>
@@ -128,7 +138,116 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-1">Problem 1</h1>
+<h2 id="types-of-population-distributions">Types of Population Distributions</h2>
+<p>Population distribution describes how individuals in a population are spaced within a given area. There are several common types of population distributions:</p>
+<h3 id="1-uniform-distribution">1. <strong>Uniform Distribution</strong></h3>
+<ul>
+<li>Individuals are <strong>evenly spaced</strong> throughout an area.</li>
+<li>Often occurs in species that <strong>compete for resources</strong> or maintain <strong>territorial boundaries</strong>.</li>
+<li>Example: Nesting penguins keeping equal distance from each other.</li>
+</ul>
+<h3 id="2-random-distribution">2. <strong>Random Distribution</strong></h3>
+<ul>
+<li>The position of each individual is <strong>independent of others</strong>.</li>
+<li>Rare in nature; usually occurs in environments with <strong>abundant and consistent resources</strong>.</li>
+<li>Example: Dandelions scattered by wind in a field.</li>
+</ul>
+<h3 id="3-clumped-distribution">3. <strong>Clumped Distribution</strong></h3>
+<ul>
+<li>Individuals are grouped into <strong>patches or clusters</strong>.</li>
+<li>This is the <strong>most common</strong> type in nature.</li>
+<li>Caused by factors like <strong>resource availability</strong>, <strong>social behavior</strong>, or <strong>reproduction strategies</strong>.</li>
+<li>Example: Herds of elephants, schools of fish, or flocks of birds.</li>
+</ul>
+<h3 id="4-gradient-or-zonal-distribution-ecological-context">4. <strong>Gradient or Zonal Distribution</strong> <em>(Ecological Context)</em></h3>
+<ul>
+<li>Population density changes <strong>along a gradient</strong>, such as elevation, temperature, or moisture.</li>
+<li>Common in ecological niches like mountain ranges or aquatic depth zones.</li>
+<li>Example: Plant species changing with altitude.</li>
+</ul>
+<h3 id="summary-table">Summary Table</h3>
+<table>
+<thead>
+<tr>
+<th>Distribution Type</th>
+<th>Appearance</th>
+<th>Common Causes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uniform</td>
+<td>Even spacing</td>
+<td>Competition, territorial behavior</td>
+</tr>
+<tr>
+<td>Random</td>
+<td>No pattern</td>
+<td>Abundant resources, lack of interaction</td>
+</tr>
+<tr>
+<td>Clumped</td>
+<td>Clustered groups</td>
+<td>Resource patches, social grouping</td>
+</tr>
+<tr>
+<td>Gradient/Zonal</td>
+<td>Density changes</td>
+<td>Environmental gradients</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_1"><img alt="Projectile Motion" src="../Pictures/population_distributions%20%281%29.png"/></h2>
+<h2 id="sampling-distribution-of-the-sample-mean">Sampling Distribution of the Sample Mean</h2>
+<p>The figure illustrates the <strong>sampling distributions</strong> of the <strong>sample mean</strong> derived from a <strong>skewed population</strong> (exponential distribution), for various sample sizes:</p>
+<ul>
+<li>Sample sizes used: <strong>5, 10, 30, and 50</strong></li>
+<li>For each size, <strong>1000 random samples</strong> were drawn, and their <strong>means</strong> were calculated</li>
+<li>Histograms of these sample means are shown in each subplot</li>
+</ul>
+<h3 id="key-observations">Key Observations:</h3>
+<ul>
+<li><strong>Small sample sizes</strong> (e.g., 5) yield a distribution of sample means that is still <strong>skewed</strong>, resembling the original population.</li>
+<li>As the <strong>sample size increases</strong>, the distribution of sample means becomes:</li>
+<li><strong>More symmetric</strong></li>
+<li><strong>Closer to a normal distribution</strong></li>
+<li>This trend demonstrates the <strong>Central Limit Theorem (CLT)</strong>, which states that the distribution of the sample mean approaches normality as the sample size increases, regardless of the shape of the original population.</li>
+</ul>
+<p>The red dashed line in each histogram marks the <strong>true population mean</strong> as a reference point.</p>
+<h2 id="_2"><img alt="Projectile Motion" src="../Pictures/population.png"/></h2>
+<h2 id="importance-of-the-central-limit-theorem-clt-in-real-world-applications">Importance of the Central Limit Theorem (CLT) in Real-World Applications</h2>
+<p>The <strong>Central Limit Theorem (CLT)</strong> is a foundational concept in statistics with wide-ranging implications across various fields. It states that, regardless of the population's distribution, the distribution of the sample mean approaches a <strong>normal distribution</strong> as the sample size becomes large.</p>
+<h3 id="real-world-applications">Real-World Applications:</h3>
+<ul>
+<li>
+<p><strong>Estimating Population Parameters</strong>:</p>
+</li>
+<li>
+<p>CLT enables the use of sample data to make <strong>inferences about population means and proportions</strong> with known confidence levels.</p>
+</li>
+<li>
+<p>It forms the basis for <strong>confidence intervals</strong> and <strong>hypothesis testing</strong>.</p>
+</li>
+<li>
+<p><strong>Quality Control in Manufacturing</strong>:</p>
+</li>
+<li>
+<p>In processes where products are sampled (e.g., checking lengths, weights, tolerances), CLT allows for <strong>monitoring average quality metrics</strong> using control charts.</p>
+</li>
+<li>
+<p>Detects whether a process is <strong>statistically under control</strong>.</p>
+</li>
+<li>
+<p><strong>Predicting Outcomes in Financial Models</strong>:</p>
+</li>
+<li>
+<p>Financial analysts use CLT to assume that <strong>returns of asset portfolios</strong> follow a normal distribution (when sample size is large), allowing for <strong>risk estimation</strong> (e.g., VaR).</p>
+</li>
+<li>Simplifies modeling in <strong>option pricing</strong> and <strong>Monte Carlo simulations</strong>.</li>
+</ul>
+<p>## <img alt="Projectile Motion" src="../Pictures/clt_applications_diagram.png"/></p>
+<h3 id="summary">Summary:</h3>
+<p>The CLT provides a powerful tool to apply <strong>normal probability models</strong> even when the underlying data is not normally distributed, enabling <strong>robust decision-making</strong> based on sampling.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

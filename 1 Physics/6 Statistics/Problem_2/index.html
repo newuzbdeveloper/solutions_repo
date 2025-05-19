@@ -86,6 +86,10 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Problem 2</a>
 <ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="#method-overview">Method Overview:</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#formula">Formula:</a>
+</li>
 </ul>
 </li>
 </ul>
@@ -128,7 +132,107 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="problem-2">Problem 2</h1>
+<h2 id="estimating-using-monte-carlo-methods">Estimating π Using Monte Carlo Methods</h2>
+<p>Monte Carlo methods use <strong>random sampling</strong> to estimate numerical values. One classic application is estimating the value of <strong>π (pi)</strong> by simulating points in a square and checking how many fall inside a quarter circle.</p>
+<h3 id="method-overview">Method Overview:</h3>
+<ul>
+<li>A square of side length 1 is considered, enclosing a quarter circle of radius 1.</li>
+<li>Random points are generated within the square.</li>
+<li>The ratio of points that fall <strong>inside the quarter circle</strong> to the total number of points approximates the <strong>area ratio</strong> between the circle and the square.</li>
+<li>Since the area of a quarter circle is (π/4), multiplying this ratio by 4 gives an estimate for π.</li>
+</ul>
+<h3 id="formula">Formula:</h3>
+<div class="arithmatex">\[
+\pi \approx 4 \times \frac{\text{Number of points inside the circle}}{\text{Total number of points}}
+\]</div>
+<p>This simple yet powerful method demonstrates how randomness and probability can be used to estimate mathematical constants with increasing accuracy as the number of samples grows.</p>
+<h2 id="_1"><img alt="Projectile Motion" src="../Pictures/monte_carlo_pi_estimate.png"/></h2>
+<h1 id="estimating-using-random-points-in-a-square">Estimating π Using Random Points in a Square</h1>
+<h2 id="concept">Concept</h2>
+<p>You can estimate the value of π using a <strong>Monte Carlo method</strong> by comparing the number of points that fall inside a circle to the total number of points within a square that encloses the circle.</p>
+<h2 id="how-it-works">How It Works</h2>
+<ul>
+<li>Draw a <strong>unit circle</strong> (radius = 1) centered at the origin.</li>
+<li>Enclose it in a square that spans from -1 to 1 on both the x and y axes.</li>
+<li>
+<p>The side length of the square is 2, so the <strong>area of the square</strong> is:</p>
+</li>
+<li>
+<p>The <strong>area of the unit circle</strong> is:</p>
+</li>
+<li>
+<p>Randomly generate many points within the square.</p>
+</li>
+<li>
+<p>Count how many points fall <strong>inside the circle</strong> using the condition:</p>
+</li>
+<li>
+<p>Let:</p>
+</li>
+<li><code>total_points</code> = total number of random points</li>
+<li><code>points_inside_circle</code> = number of points satisfying <span class="arithmatex">\( x^2 + y^2 ≤ 1 \)</span></li>
+</ul>
+<p>Then, the ratio of points inside the circle to the total number of points approximates the ratio of the areas:</p>
+<h2 id="final-formula">Final Formula</h2>
+<p>Multiplying both sides of the equation by 4 gives the approximation:</p>
+<p>This formula provides an estimate for π using a probabilistic approach. The larger the number of random points, the more accurate the estimation will be.</p>
+<h2 id="_2"><img alt="Projectile Motion" src="../Pictures/monte_carlo_pi.png"/></h2>
+<h2 id="buffons-needle-problem">Buffon's Needle Problem</h2>
+<p>Buffon's Needle is a probability method to estimate the value of π by dropping a needle onto a plane with equally spaced parallel lines.</p>
+<p>If a needle of length <code>L</code> is dropped randomly on a plane with parallel lines spaced <code>d</code> units apart (where <code>L ≤ d</code>), the probability that the needle crosses a line depends on π.</p>
+<p>By repeating this experiment many times, we can estimate π using the observed number of crossings.</p>
+<h3 id="formula_1">Formula</h3>
+<div class="arithmatex">\[
+\pi \approx \frac{2 \cdot \text{needle length} \cdot \text{number of throws}}{\text{distance between lines} \cdot \text{number of crossings}}
+\]</div>
+<p>This method demonstrates how geometry and probability can be used to approximate π.</p>
+<h2 id="_3"><img alt="Projectile Motion" src="../Pictures/buffon_needle_simulation.png"/></h2>
+<h2 id="exploring-the-effect-of-needle-drops-on-estimate-accuracy">Exploring the Effect of Needle Drops on Estimate Accuracy</h2>
+<p>This experiment investigates how the number of needle drops in Buffon's Needle simulation influences the accuracy of the π estimate. By increasing the number of trials, the estimate is expected to converge more closely to the true value of π.</p>
+<p>Additionally, the convergence rate of Buffon's Needle method is compared to the classical circle-based Monte Carlo method for estimating π. Understanding the relative efficiency and speed of convergence of these two probabilistic methods provides insight into their practical applications and limitations.</p>
+<h3 id="comparison-buffons-needle-vs-circle-based-method">🔁 Comparison: Buffon’s Needle vs. Circle-based Method</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Buffon’s Needle</th>
+<th>Circle-based Monte Carlo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Principle</strong></td>
+<td>Uses geometric probability with random needle drops</td>
+<td>Uses random points inside a square and a circle</td>
+</tr>
+<tr>
+<td><strong>Visualization</strong></td>
+<td>Simulated needles crossing parallel lines</td>
+<td>Points inside or outside a quarter-circle</td>
+</tr>
+<tr>
+<td><strong>Accuracy</strong></td>
+<td>Slower convergence, higher variance</td>
+<td>Faster convergence, more stable estimates</td>
+</tr>
+<tr>
+<td><strong>Computational Cost</strong></td>
+<td>Requires trigonometry and angle calculations</td>
+<td>Simple distance calculation (Pythagorean theorem)</td>
+</tr>
+<tr>
+<td><strong>Educational Value</strong></td>
+<td>Classic and elegant example of probability in geometry</td>
+<td>Easy to implement and visualize in simulations</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="summary">📝 Summary</h3>
+<ul>
+<li><strong>Buffon’s Needle</strong> is a classical probabilistic method that illustrates geometric probability but converges slowly.</li>
+<li><strong>Circle-based Monte Carlo</strong> is simpler and more computationally efficient, making it better suited for accurate π estimation in practice.</li>
+</ul>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
